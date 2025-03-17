@@ -30,7 +30,7 @@ Key features include:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/YourUsername/SSUpscaler.git
+   git clone https://github.com/UKR-PROJECTS/SSUpscaler.git
    cd SSUpscaler
    ```
 
