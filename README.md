@@ -120,7 +120,7 @@ Key features include:
 ## Examples
 
 <p align="center">
-  <img src="resources/GUI Screenshot.png" width="300" height="300" alt="SSTube Icon" />
+  <img src="resources/GUI Screenshot.png" width="500" height="500" alt="SSTube Icon" />
 </p>
 
 ### Upscaling a Video to 1080p
