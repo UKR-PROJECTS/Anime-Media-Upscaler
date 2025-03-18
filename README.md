@@ -1,5 +1,9 @@
 # SSUpscaler
 
+<p align="center">
+  <img src="resources/logo.png" width="300" height="300" alt="SSTube Icon" />
+</p>
+
 SSUpscaler is a Python-based desktop application designed to upscale videos and images using advanced interpolation techniques. Built with PyQt6 for the graphical interface and OpenCV for media processing, this tool allows users to convert their media files to higher resolutions (1080p, 2K, or 4K) quickly and efficiently. It also preserves audio tracks for videos using FFmpeg.
 
 ---
