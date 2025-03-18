@@ -119,6 +119,10 @@ Key features include:
 
 ## Examples
 
+<p align="center">
+  <img src="resources/GUI Screenshot.png" width="300" height="300" alt="SSTube Icon" />
+</p>
+
 ### Upscaling a Video to 1080p
 
 1. **Input:** A 720p video file (e.g., `sample_video.mp4`).
