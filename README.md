@@ -159,4 +159,4 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 
 ---
 
-For further information or support, please feel free to open an issue or contact the project maintainers. Happy upscaling!
+For further information or support, please feel free to open an issue or contact the project maintainers.
