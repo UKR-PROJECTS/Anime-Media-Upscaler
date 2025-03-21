@@ -119,9 +119,7 @@ Key features include:
 
 ## Examples
 
-<p align="center">
-  <img src="resources/GUI Screenshot.png" width="500" height="500" alt="SSTube Icon" />
-</p>
+![Screenshot](https://github.com/user-attachments/assets/2e222ad2-66da-4e26-9676-f59b4c5cf375)
 
 ### Upscaling a Video to 1080p
 
