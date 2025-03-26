@@ -1,4 +1,4 @@
-# SSUpscaler
+# SSUpscaler v1.0.0
 
 <p align="center">
   <img src="resources/logo.png" width="300" height="300" alt="SSTube Icon" />
