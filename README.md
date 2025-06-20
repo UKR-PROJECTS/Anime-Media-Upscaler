@@ -1,4 +1,4 @@
-# SSUpscaler v1.0.0
+# Media-Upscaler v1.0.0
 [![Status](https://img.shields.io/badge/status-active-47c219.svg)](#) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 <p align="center">
   <img src="resources/logo.png" width="300" height="300" alt="SSTube Icon" />
