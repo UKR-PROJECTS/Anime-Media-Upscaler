@@ -4,13 +4,13 @@
   <img src="resources/logo.png" width="300" height="300" alt="SSTube Icon" />
 </p>
 
-SSUpscaler is a Python-based desktop application designed to upscale videos and images using advanced interpolation techniques. Built with PyQt6 for the graphical interface and OpenCV for media processing, this tool allows users to convert their media files to higher resolutions (1080p, 2K, or 4K) quickly and efficiently. It also preserves audio tracks for videos using FFmpeg.
+Media-Upscaler is a Python-based desktop application designed to upscale videos and images using advanced interpolation techniques. Built with PyQt6 for the graphical interface and OpenCV for media processing, this tool allows users to convert their media files to higher resolutions (1080p, 2K, or 4K) quickly and efficiently. It also preserves audio tracks for videos using FFmpeg.
 
 ---
 
 ## Description
 
-SSUpscaler offers an easy-to-use, graphical interface for batch processing media files. With support for various video and image formats, users can upscale their content using different interpolation methods such as Nearest, Linear, Cubic, and Lanczos. The application provides real-time progress feedback and error handling to ensure a smooth upscaling experience.
+Media-Upscaler offers an easy-to-use, graphical interface for batch processing media files. With support for various video and image formats, users can upscale their content using different interpolation methods such as Nearest, Linear, Cubic, and Lanczos. The application provides real-time progress feedback and error handling to ensure a smooth upscaling experience.
 
 Key features include:
 - **Batch Processing:** Add multiple media files and process them in one go.
@@ -34,8 +34,8 @@ Key features include:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/UKR-PROJECTS/SSUpscaler.git
-   cd SSUpscaler
+   git clone https://github.com/UKR-PROJECTS/Media-Upscaler.git
+   cd Media-Upscaler
    ```
 
 2. **Create a Virtual Environment (Optional but Recommended):**
@@ -64,7 +64,7 @@ Key features include:
    The recommended structure should look like this:
 
    ```
-   SSUpscaler/
+   Media-Upscaler/
    ├── bin/
    │   └── ffmpeg.exe
    ├── resources/
@@ -139,7 +139,7 @@ Key features include:
 
 ## Contributing
 
-Contributions are welcome! If you wish to contribute to SSUpscaler, please follow these guidelines:
+Contributions are welcome! If you wish to contribute to Media-Upscaler, please follow these guidelines:
 
 1. **Fork the Repository:** Create your own fork and clone it locally.
 2. **Create a Branch:** Use a descriptive branch name (e.g., `feature/new-interpolation-method`).
