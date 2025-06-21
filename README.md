@@ -43,7 +43,7 @@ Anime-Media-Upscaler/
 ├── README.md                # This file
 ├── requirements.txt         # Python dependencies
 ├── src/                         # Source directory
-│    ├── build.bat                # Windows build script
+│    ├── build.bat                # Convert main.py into exe
 │    ├── main.py                  # Application entry point
 │    ├── favicon.ico              # App icon
 │    ├── bin/                     # External executables
