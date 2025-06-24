@@ -144,3 +144,23 @@ pip install -r requirements.txt
 * [Real‑ESRGAN](https://github.com/xinntao/Real-ESRGAN) for super‑resolution models
 * [PyQt6](https://pypi.org/project/PyQt6/) for the GUI framework
 * [FFmpeg](https://ffmpeg.org/) for high‑quality video processing
+
+## 🌟 Star History
+
+If you find this project useful, please consider giving it a star on GitHub! Your support helps us continue improving and maintaining this tool.
+
+## 📞 Support
+
+- **GitHub Issues**: [Report bugs or request features](https://github.com/UKR-PROJECTS/Anime-Media-Upscaler/issues)
+- **Discussions**: [Community discussions and Q&A](https://github.com/UKR-PROJECTS/Anime-Media-Upscaler/discussions)
+- **Email**: ukrpurojekuto@gmail.com
+
+---
+
+<div align="center">
+
+**Made with ❤️ by the Ujjwal Nova**
+
+[⭐ Star this repo](https://github.com/UKR-PROJECTS/Anime-Media-Upscaler) | [🐛 Report Bug](https://github.com/UKR-PROJECTS/Anime-Media-Upscaler/issues) | [💡 Request Feature](https://github.com/UKR-PROJECTS/Anime-Media-Upscaler/issues)
+
+</div>
