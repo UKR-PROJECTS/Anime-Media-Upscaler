@@ -87,8 +87,8 @@ pip install -r requirements.txt
 1. **Clone** the repository
 
    ```bash
-   git clone https://github.com/UKR-PROJECTS/Anime-Media-Upscaler.git
-   cd Anime-Media-Upscaler
+   git clone https://github.com/UKR-PROJECTS/real-esrgan-guir.git
+   cd real-esrgan-gui
    ```
 2. **Ensure** `bin/ffmpeg` and `bin/realesrgan-ncnn-vulkan` are present or in PATH
 3. **Install** Python dependencies
