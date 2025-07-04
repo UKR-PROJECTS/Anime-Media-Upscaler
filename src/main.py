@@ -8,7 +8,7 @@ using Real-ESRGAN AI models with advanced batch processing capabilities.
 Author: Ujjwal Nova
 Version: 2.0.0
 License: MIT
-Repository: https://github.com/ukr-projects/real-esrgan-gui
+Repository: https://github.com/ukr-projects/sharpify-gui
 
 Key Features:
 - Batch processing of images and videos with 2x, 3x, and 4x upscaling
@@ -48,8 +48,8 @@ def main():
     Initializes the QApplication and main window.
     """
     app = QApplication(sys.argv)
-    app.setApplicationName("Anime-Media-Upscaler")
-    app.setApplicationVersion("2.0")
+    app.setApplicationName("sharpify-gui")
+    app.setApplicationVersion("2.0.0")
     app.setOrganizationName("UKR-PROJECTS")
 
     icon_path = 'favicon.ico'
@@ -59,7 +59,7 @@ def main():
     window = AnimeUpscalerGUI()
     window.show()
 
-    window.log("Anime-Media-Upscaler v2.0.0 started")
+    window.log("sharpify-gui v2.0.0 started")
     window.log("Checking dependencies...")
 
     sys.exit(app.exec())
