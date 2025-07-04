@@ -37,27 +37,35 @@ Anime‑Media‑Upscaler is a powerful, open‑source desktop application built 
 ## 🗂️ Folder Structure
 
 ```
-
-Anime-Media-Upscaler/
+real-esrgan-gui/
+├── .gitignore               # Git ignore file
 ├── LICENSE                  # MIT License
 ├── README.md                # This file
 ├── requirements.txt         # Python dependencies
-├── src/                         # Source directory
-│    ├── build.bat                # Convert main.py into exe
-│    ├── main.py                  # Application entry point
-│    ├── favicon.ico              # App icon
-│    ├── bin/                     # External executables
-│    │   ├── ffmpeg.exe           # FFmpeg binary
-│    │   └── realesrgan-ncnn-vulkan.exe  # Real‑ESRGAN engine
-│    └── models/                  # Pre‑downloaded .param & .bin files
-│        └── \*.param  \*.bin
 ├── example/                 # Sample inputs & outputs
 │   ├── pikachu.jpg
 │   └── pikachu_upscaled_x4.jpg
-└── screenshots/             # UI previews
-    └── screenshot.png
+├── screenshots/             # UI previews
+│   └── screenshot.png
+└── src/                     # Source directory
+    ├── build.bat            # Script to build the application
+    ├── favicon.ico          # Application icon
+    ├── main.py              # Application entry point
+    ├── app/                 # Core application logic
+    │   ├── __init__.py
+    │   ├── main_window.py   # Main application window
+    │   ├── settings_dialog.py # Settings dialog
+    │   ├── ui_utils.py      # Utility functions for UI
+    │   └── workers.py       # Worker threads for processing
+    ├── bin/                 # External binaries
+    │   ├── ffmpeg.exe
+    │   └── realesrgan-ncnn-vulkan.exe
+    └── models/              # AI models
+        ├── realesr-animevideov3-x2.bin
+        ├── realesr-animevideov3-x2.param
+        ├── ...
 
-````
+```
 
 ---
 
@@ -151,8 +159,8 @@ If you find this project useful, please consider giving it a star on GitHub! You
 
 ## 📞 Support
 
-- **GitHub Issues**: [Report bugs or request features](https://github.com/UKR-PROJECTS/Anime-Media-Upscaler/issues)
-- **Discussions**: [Community discussions and Q&A](https://github.com/UKR-PROJECTS/Anime-Media-Upscaler/discussions)
+- **GitHub Issues**: [Report bugs or request features](https://github.com/ukr-projects/real-esrgan-guir/issues)
+- **Discussions**: [Community discussions and Q&A](https://github.com/ukr-projects/real-esrgan-guir/discussions)
 - **Email**: ukrpurojekuto@gmail.com
 
 ---
@@ -161,6 +169,6 @@ If you find this project useful, please consider giving it a star on GitHub! You
 
 **Made with ❤️ by the Ujjwal Nova**
 
-[⭐ Star this repo](https://github.com/UKR-PROJECTS/Anime-Media-Upscaler) | [🐛 Report Bug](https://github.com/UKR-PROJECTS/Anime-Media-Upscaler/issues) | [💡 Request Feature](https://github.com/UKR-PROJECTS/Anime-Media-Upscaler/issues)
+[⭐ Star this repo](https://github.com/ukr-projects/real-esrgan-guir) | [🐛 Report Bug](https://github.com/ukr-projects/real-esrgan-guir/issues) | [💡 Request Feature](https://github.com/ukr-projects/real-esrgan-guir/issues)
 
 </div>
