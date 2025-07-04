@@ -1,4 +1,4 @@
-# 🚀 real-esrgan-gui v2.0.0
+# 🚀 sharpify-gui v2.0.0
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green) ![Language: Python](https://img.shields.io/badge/Language-Python-blue) ![Status: Active](https://img.shields.io/badge/Status-Active-brightgreen)
 
@@ -6,7 +6,7 @@
   <img src="src/favicon.ico" alt="App Icon" width="64" height="64" />
 </p>
 
-real-esrgan-gui is a powerful, open‑source desktop application built with PyQt6, leveraging Real‑ESRGAN AI models and FFmpeg to batch upscale your favorite anime images and videos with ease 
+sharpify-gui is a powerful, open‑source desktop application built with PyQt6, leveraging Real‑ESRGAN AI models and FFmpeg to batch upscale your favorite anime images and videos with ease 
 
 ---
 
@@ -37,7 +37,7 @@ real-esrgan-gui is a powerful, open‑source desktop application built with PyQt
 ## 🗂️ Folder Structure
 
 ```
-real-esrgan-gui/
+sharpify-gui/
 ├── .gitignore               # Git ignore file
 ├── LICENSE                  # MIT License
 ├── README.md                # This file
@@ -95,8 +95,8 @@ pip install -r requirements.txt
 1. **Clone** the repository
 
    ```bash
-   git clone https://github.com/ukr-projects/real-esrgan-gui.git
-   cd real-esrgan-gui
+   git clone https://github.com/ukr-projects/sharpify-gui.git
+   cd sharpify-gui
    ```
 2. **Ensure** `bin/ffmpeg` and `bin/realesrgan-ncnn-vulkan` are present or in PATH
 3. **Install** Python dependencies
@@ -159,8 +159,8 @@ If you find this project useful, please consider giving it a star on GitHub! You
 
 ## 📞 Support
 
-- **GitHub Issues**: [Report bugs or request features](https://github.com/ukr-projects/real-esrgan-gui/issues)
-- **Discussions**: [Community discussions and Q&A](https://github.com/ukr-projects/real-esrgan-gui/discussions)
+- **GitHub Issues**: [Report bugs or request features](https://github.com/ukr-projects/sharpify-gui/issues)
+- **Discussions**: [Community discussions and Q&A](https://github.com/ukr-projects/sharpify-gui/discussions)
 - **Email**: ukrpurojekuto@gmail.com
 
 ---
@@ -169,6 +169,6 @@ If you find this project useful, please consider giving it a star on GitHub! You
 
 **Made with ❤️ by the Ujjwal Nova**
 
-[⭐ Star this repo](https://github.com/ukr-projects/real-esrgan-gui) | [🐛 Report Bug](https://github.com/ukr-projects/real-esrgan-gui/issues) | [💡 Request Feature](https://github.com/ukr-projects/real-esrgan-gui/issues)
+[⭐ Star this repo](https://github.com/ukr-projects/sharpify-gui) | [🐛 Report Bug](https://github.com/ukr-projects/sharpify-gui/issues) | [💡 Request Feature](https://github.com/ukr-projects/sharpify-gui/issues)
 
 </div>
