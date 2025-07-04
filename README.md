@@ -95,7 +95,7 @@ pip install -r requirements.txt
 1. **Clone** the repository
 
    ```bash
-   git clone https://github.com/ukr-projects/real-esrgan-guir.git
+   git clone https://github.com/ukr-projects/real-esrgan-gui.git
    cd real-esrgan-gui
    ```
 2. **Ensure** `bin/ffmpeg` and `bin/realesrgan-ncnn-vulkan` are present or in PATH
@@ -159,8 +159,8 @@ If you find this project useful, please consider giving it a star on GitHub! You
 
 ## 📞 Support
 
-- **GitHub Issues**: [Report bugs or request features](https://github.com/ukr-projects/real-esrgan-guir/issues)
-- **Discussions**: [Community discussions and Q&A](https://github.com/ukr-projects/real-esrgan-guir/discussions)
+- **GitHub Issues**: [Report bugs or request features](https://github.com/ukr-projects/real-esrgan-gui/issues)
+- **Discussions**: [Community discussions and Q&A](https://github.com/ukr-projects/real-esrgan-gui/discussions)
 - **Email**: ukrpurojekuto@gmail.com
 
 ---
@@ -169,6 +169,6 @@ If you find this project useful, please consider giving it a star on GitHub! You
 
 **Made with ❤️ by the Ujjwal Nova**
 
-[⭐ Star this repo](https://github.com/ukr-projects/real-esrgan-guir) | [🐛 Report Bug](https://github.com/ukr-projects/real-esrgan-guir/issues) | [💡 Request Feature](https://github.com/ukr-projects/real-esrgan-guir/issues)
+[⭐ Star this repo](https://github.com/ukr-projects/real-esrgan-gui) | [🐛 Report Bug](https://github.com/ukr-projects/real-esrgan-gui/issues) | [💡 Request Feature](https://github.com/ukr-projects/real-esrgan-gui/issues)
 
 </div>

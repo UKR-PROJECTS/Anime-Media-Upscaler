@@ -8,7 +8,7 @@ using Real-ESRGAN AI models with advanced batch processing capabilities.
 Author: Ujjwal Nova
 Version: 2.0.0
 License: MIT
-Repository: https://github.com/UKR-PROJECTS/Anime-Media-Upscaler
+Repository: https://github.com/ukr-projects/real-esrgan-gui
 
 Key Features:
 - Batch processing of images and videos with 2x, 3x, and 4x upscaling
