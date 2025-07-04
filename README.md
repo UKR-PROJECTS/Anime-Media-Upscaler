@@ -1,4 +1,4 @@
-# 🚀 Anime‑Media‑Upscaler v2.0.0
+# 🚀 real-esrgan-gui v2.0.0
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green) ![Language: Python](https://img.shields.io/badge/Language-Python-blue) ![Status: Active](https://img.shields.io/badge/Status-Active-brightgreen)
 
@@ -6,7 +6,7 @@
   <img src="src/favicon.ico" alt="App Icon" width="64" height="64" />
 </p>
 
-Anime‑Media‑Upscaler is a powerful, open‑source desktop application built with PyQt6, leveraging Real‑ESRGAN AI models and FFmpeg to batch upscale your favorite anime images and videos with ease 
+real-esrgan-gui is a powerful, open‑source desktop application built with PyQt6, leveraging Real‑ESRGAN AI models and FFmpeg to batch upscale your favorite anime images and videos with ease 
 
 ---
 
