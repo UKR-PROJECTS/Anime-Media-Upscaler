@@ -73,13 +73,13 @@ class UpscaleWorker(QRunnable):
                 raise FileNotFoundError("Real-ESRGAN models directory not found. Please ensure models are installed.")
 
             # Get the selected model and check if it exists
-            model_name = self.settings.get('model', 'realesr-animevideov3-x2')
+            model_name = self.settings.get('model', 'realesr-animevideov3-x4')
             model_file = os.path.join(models_dir, f"{model_name}.param")
 
             if not os.path.exists(model_file):
                 available_models = self._get_available_models(models_dir)
                 if available_models:
-                    requested_model = self.settings.get('model', 'realesr-animevideov3-x2')
+                    requested_model = self.settings.get('model', 'realesr-animevideov3-x4')
                     if requested_model in available_models:
                         model_name = requested_model
                     else:
@@ -222,7 +222,7 @@ class UpscaleWorker(QRunnable):
             output_path = os.path.join(upscaled_dir, frame_file)
             cmd = [
                 realesrgan_path, '-i', input_path, '-o', output_path,
-                '-n', self.settings.get('model', 'realesr-animevideov3-x2'),
+                '-n', self.settings.get('model', 'realesr-animevideov3-x4'),
             ]
             if self.settings.get('use_gpu', True):
                 cmd.extend(['-g', '0'])

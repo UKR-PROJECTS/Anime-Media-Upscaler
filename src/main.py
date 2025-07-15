@@ -1,5 +1,5 @@
 """
-Anime Media Upscaler - Professional Anime Image and Video Upscaling Application
+sharpify-gui - Professional Image and Video Upscaling Application
 ===============================================================================
 
 A comprehensive PyQt6-based GUI application for upscaling anime images and videos

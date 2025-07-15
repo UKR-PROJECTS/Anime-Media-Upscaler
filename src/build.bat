@@ -1,6 +1,6 @@
 @echo off
 echo Building Anime Media Upscaler...
-pyinstaller --name "AMU" ^
+pyinstaller --name "sharpify-gui" ^
   --windowed ^
   --icon=favicon.ico ^
   main.py

@@ -31,7 +31,6 @@ class SettingsDialog(QDialog):
         model_layout = QFormLayout(model_group)
         self.model_combo = QComboBox()
         self.model_combo.addItems([
-            'realesr-animevideov3-x2', 'realesr-animevideov3-x3',
             'realesr-animevideov3-x4', 'realesrgan-x4plus',
             'realesrgan-x4plus-anime'
         ])
@@ -115,7 +114,7 @@ class SettingsDialog(QDialog):
 
     def set_settings(self, settings: Dict[str, Any]):
         """Sets the dialog's UI components based on the provided settings."""
-        self.model_combo.setCurrentText(settings.get('model', 'realesr-animevideov3-x2'))
+        self.model_combo.setCurrentText(settings.get('model', 'realesr-animevideov3-x4'))
         self.gpu_check.setChecked(settings.get('use_gpu', True))
         self.tile_spin.setValue(settings.get('tile_size', 400) or 0)
         self.fps_spin.setValue(settings.get('fps', 24))

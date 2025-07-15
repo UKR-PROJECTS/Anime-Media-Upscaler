@@ -41,7 +41,7 @@ class AnimeUpscalerGUI(QMainWindow):
 
     def init_ui(self):
         """Initializes the main user interface components."""
-        self.setWindowTitle("Anime-Media-Upscaler")
+        self.setWindowTitle("sharpify-gui")
         self.setGeometry(100, 100, 1200, 800)
 
         # Set window icon
@@ -111,7 +111,7 @@ class AnimeUpscalerGUI(QMainWindow):
         quick_layout = QFormLayout(quick_group)
         self.model_combo = QComboBox()
         self.model_combo.addItems([
-            'Anime Image/Video 2x', 'Anime Image/Video 3x', 'Anime Image/Video 4x',
+            'Anime Image/Video 4x',
             'General Image/Video 4x', 'Anime Photos 4x'
         ])
         quick_layout.addRow("Model:", self.model_combo)
@@ -326,27 +326,23 @@ class AnimeUpscalerGUI(QMainWindow):
             new_settings = dialog.get_settings()
             self.save_advanced_settings(new_settings)
             model_map_reverse = {
-                'realesr-animevideov3-x2': 'Anime Image/Video 2x',
-                'realesr-animevideov3-x3': 'Anime Image/Video 3x',
                 'realesr-animevideov3-x4': 'Anime Image/Video 4x',
                 'realesrgan-x4plus': 'General Image/Video 4x',
                 'realesrgan-x4plus-anime': 'Anime Photos 4x'
             }
-            quick_model = model_map_reverse.get(new_settings['model'], 'Anime Image/Video 2x')
+            quick_model = model_map_reverse.get(new_settings['model'], 'Anime Image/Video 4x')
             self.model_combo.setCurrentText(quick_model)
             self.log("Settings updated")
 
     def get_current_settings(self) -> Dict[str, Any]:
         """Returns the current upscaling settings."""
         model_map = {
-            'Anime Image/Video 2x': 'realesr-animevideov3-x2',
-            'Anime Image/Video 3x': 'realesr-animevideov3-x3',
             'Anime Image/Video 4x': 'realesr-animevideov3-x4',
             'General Image/Video 4x': 'realesrgan-x4plus',
             'Anime Photos 4x': 'realesrgan-x4plus-anime'
         }
         return {
-            'model': model_map.get(self.model_combo.currentText(), 'realesr-animevideov3-x2'),
+            'model': model_map.get(self.model_combo.currentText(), 'realesr-animevideov3-x4'),
             'use_gpu': self.settings.value('advanced_use_gpu', True, bool),
             'tile_size': self.settings.value('advanced_tile_size', 400, int),
             'fps': self.settings.value('advanced_fps', 24, int),
@@ -409,9 +405,6 @@ class AnimeUpscalerGUI(QMainWindow):
 
         model_name = self.get_current_settings()['model']
         scale = 'x4'
-        if 'x2' in model_name: scale = 'x2'
-        elif 'x3' in model_name: scale = 'x3'
-        elif 'x4' in model_name: scale = 'x4'
 
         output_filename = f"{file_name}_upscaled_{scale}{output_ext}"
         output_path = os.path.join(self.output_folder, output_filename)

@@ -22,7 +22,7 @@ sharpify-gui is a powerful, open‑source desktop application built with PyQt6, 
 
 ## 🛠️ All Features
 
-- **Image Upscaling**: JPG/PNG/BMP/TIFF/WebP → 2×/3×/4× scales  
+- **Image Upscaling**: JPG/PNG/BMP/TIFF/WebP → 4× scales  
 - **Video Upscaling**: MP4/AVI/MKV/MOV/WMV/FLV → upscaled frames + original audio  
 - **Batch Queue**: enqueue multiple files for sequential processing  
 - **Model Manager**: choose from anime‑optimized & general SR Real‑ESRGAN variants  
@@ -61,10 +61,6 @@ sharpify-gui/
     │   ├── ffmpeg.exe
     │   └── realesrgan-ncnn-vulkan.exe
     └── models/              # AI models
-        ├── realesr-animevideov3-x2.bin
-        ├── realesr-animevideov3-x2.param
-        ├── ...
-
 ```
 
 ---
