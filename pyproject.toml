@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "sharpify-gui"
 version = "2.0.0"
 authors = [
-  { name="ukr-projects", email="ukr.projects@gmail.com" }
+  { name="UKR", email="ukrpurojekuto@gmail.com" },
 ]
 description = "A desktop GUI for the Real-ESRGAN image and video upscaler."
 readme = "README.md"
