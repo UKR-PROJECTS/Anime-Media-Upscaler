@@ -38,29 +38,40 @@ sharpify-gui is a powerful, open‑source desktop application built with PyQt6, 
 
 ```
 sharpify-gui/
-├── .gitignore               # Git ignore file
-├── LICENSE                  # MIT License
-├── README.md                # This file
-├── requirements.txt         # Python dependencies
-├── example/                 # Sample inputs & outputs
+├── .gitignore
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── pyproject.toml
+├── README.md
+├── requirements.txt
+├── example/
 │   ├── pikachu.jpg
 │   └── pikachu_upscaled_x4.jpg
-├── screenshots/             # UI previews
+├── screenshots/
 │   └── screenshot.png
-└── src/                     # Source directory
-    ├── build.bat            # Script to build the application
-    ├── favicon.ico          # Application icon
-    ├── main.py              # Application entry point
-    ├── app/                 # Core application logic
-    │   ├── __init__.py
-    │   ├── main_window.py   # Main application window
-    │   ├── settings_dialog.py # Settings dialog
-    │   ├── ui_utils.py      # Utility functions for UI
-    │   └── workers.py       # Worker threads for processing
-    ├── bin/                 # External binaries
-    │   ├── ffmpeg.exe
-    │   └── realesrgan-ncnn-vulkan.exe
-    └── models/              # AI models
+├── src/
+│   ├── build.bat
+│   ├── favicon.ico
+│   ├── main.py
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── main_window.py
+│   │   ├── settings_dialog.py
+│   │   ├── ui_utils.py
+│   │   └── workers.py
+│   ├── bin/
+│   │   ├── ffmpeg.exe
+│   │   └── realesrgan-ncnn-vulkan.exe
+│   └── models/
+│       ├── realesr-animevideov3-x4.bin
+│       ├── realesr-animevideov3-x4.param
+│       ├── realesrgan-x4plus-anime.bin
+│       ├── realesrgan-x4plus-anime.param
+│       ├── realesrgan-x4plus.bin
+│       └── realesrgan-x4plus.param
+└── tests/
+    └── test_workers.py
 ```
 
 ---
@@ -108,7 +119,7 @@ pip install -r requirements.txt
 1. **Run** the app:
 
    ```bash
-   python main.py
+   python src/main.py
    ```
 2. **Add Files**: drag‑and‑drop or click **Add Files** / **Add Folder**
 3. **Select Output Folder** and configure quick or advanced settings
