@@ -8,14 +8,28 @@ It includes the main window class `AnimeUpscalerGUI`, which is responsible for:
 - Displaying progress and log information to the user.
 - Saving and loading application settings.
 """
+
 import os
 import time
 from pathlib import Path
 from typing import Dict, Any
 from PyQt6.QtWidgets import (
-    QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel,
-    QProgressBar, QTextEdit, QFileDialog, QComboBox, QGroupBox,
-    QListWidget, QListWidgetItem, QSplitter, QFormLayout, QMessageBox
+    QMainWindow,
+    QWidget,
+    QVBoxLayout,
+    QHBoxLayout,
+    QPushButton,
+    QLabel,
+    QProgressBar,
+    QTextEdit,
+    QFileDialog,
+    QComboBox,
+    QGroupBox,
+    QListWidget,
+    QListWidgetItem,
+    QSplitter,
+    QFormLayout,
+    QMessageBox,
 )
 from PyQt6.QtCore import Qt, QSettings, QThreadPool
 from PyQt6.QtGui import QIcon, QFont, QDragEnterEvent, QDropEvent, QAction, QKeySequence
@@ -23,13 +37,14 @@ from .settings_dialog import SettingsDialog
 from .workers import UpscaleWorker
 from .ui_utils import format_time, get_files_from_directory, check_dependencies
 
+
 class AnimeUpscalerGUI(QMainWindow):
     """Main application window for the Anime-Media-Upscaler."""
 
     def __init__(self):
         """Initializes the main window, settings, thread pool, and UI."""
         super().__init__()
-        self.settings = QSettings('AnimeUpscaler', 'Settings')
+        self.settings = QSettings("AnimeUpscaler", "Settings")
         self.thread_pool = QThreadPool()
         self.thread_pool.setMaxThreadCount(2)  # Allow up to 2 concurrent workers
         self.current_workers = []
@@ -45,7 +60,7 @@ class AnimeUpscalerGUI(QMainWindow):
         self.setGeometry(100, 100, 1200, 800)
 
         # Set window icon
-        icon_path = 'favicon.ico'
+        icon_path = "favicon.ico"
         if os.path.exists(icon_path):
             self.setWindowIcon(QIcon(icon_path))
 
@@ -110,10 +125,9 @@ class AnimeUpscalerGUI(QMainWindow):
         quick_group = QGroupBox("Quick Settings")
         quick_layout = QFormLayout(quick_group)
         self.model_combo = QComboBox()
-        self.model_combo.addItems([
-            'Anime Image/Video 4x',
-            'General Image/Video 4x', 'Anime Photos 4x'
-        ])
+        self.model_combo.addItems(
+            ["Anime Image/Video 4x", "General Image/Video 4x", "Anime Photos 4x"]
+        )
         quick_layout.addRow("Model:", self.model_combo)
         layout.addWidget(quick_group)
 
@@ -124,26 +138,30 @@ class AnimeUpscalerGUI(QMainWindow):
         control_layout.addWidget(self.settings_btn)
         self.start_btn = QPushButton("Start Upscaling")
         self.start_btn.clicked.connect(self.start_upscaling)
-        self.start_btn.setStyleSheet("""
+        self.start_btn.setStyleSheet(
+            """
             QPushButton {
                 background-color: #4CAF50; color: white; font-weight: bold;
                 padding: 10px; border-radius: 5px;
             }
             QPushButton:hover { background-color: #45a049; }
             QPushButton:disabled { background-color: #cccccc; }
-        """)
+        """
+        )
         control_layout.addWidget(self.start_btn)
         self.stop_btn = QPushButton("Stop Processing")
         self.stop_btn.clicked.connect(self.stop_processing)
         self.stop_btn.setEnabled(False)
-        self.stop_btn.setStyleSheet("""
+        self.stop_btn.setStyleSheet(
+            """
             QPushButton {
                 background-color: #f44336; color: white; font-weight: bold;
                 padding: 10px; border-radius: 5px;
             }
             QPushButton:hover { background-color: #da190b; }
             QPushButton:disabled { background-color: #cccccc; }
-        """)
+        """
+        )
         control_layout.addWidget(self.stop_btn)
         layout.addLayout(control_layout)
         layout.addStretch()
@@ -196,35 +214,36 @@ class AnimeUpscalerGUI(QMainWindow):
         menubar = self.menuBar()
 
         # File menu
-        file_menu = menubar.addMenu('File')
-        add_files_action = QAction('Add Files...', self)
+        file_menu = menubar.addMenu("File")
+        add_files_action = QAction("Add Files...", self)
         add_files_action.setShortcut(QKeySequence.StandardKey.Open)
         add_files_action.triggered.connect(self.add_files)
         file_menu.addAction(add_files_action)
-        add_folder_action = QAction('Add Folder...', self)
+        add_folder_action = QAction("Add Folder...", self)
         add_folder_action.triggered.connect(self.add_folder)
         file_menu.addAction(add_folder_action)
         file_menu.addSeparator()
-        exit_action = QAction('Exit', self)
+        exit_action = QAction("Exit", self)
         exit_action.setShortcut(QKeySequence.StandardKey.Quit)
         exit_action.triggered.connect(self.close)
         file_menu.addAction(exit_action)
 
         # Tools menu
-        tools_menu = menubar.addMenu('Tools')
-        settings_action = QAction('Settings...', self)
+        tools_menu = menubar.addMenu("Tools")
+        settings_action = QAction("Settings...", self)
         settings_action.triggered.connect(self.show_settings)
         tools_menu.addAction(settings_action)
 
         # Help menu
-        help_menu = menubar.addMenu('Help')
-        about_action = QAction('About...', self)
+        help_menu = menubar.addMenu("Help")
+        about_action = QAction("About...", self)
         about_action.triggered.connect(self.show_about)
         help_menu.addAction(about_action)
 
     def apply_modern_style(self):
         """Applies a modern, dark theme to the application."""
-        self.setStyleSheet("""
+        self.setStyleSheet(
+            """
             QMainWindow { background-color: #2b2b2b; color: #ffffff; }
             QGroupBox {
                 font-weight: bold; border: 2px solid #555555;
@@ -255,7 +274,8 @@ class AnimeUpscalerGUI(QMainWindow):
                 background-color: #1e1e1e; border: 1px solid #555555;
                 border-radius: 4px; color: #ffffff;
             }
-        """)
+        """
+        )
 
     def dragEnterEvent(self, event: QDragEnterEvent):
         """Handles drag enter events to accept file drops."""
@@ -278,10 +298,12 @@ class AnimeUpscalerGUI(QMainWindow):
     def add_files(self):
         """Opens a dialog to add files to the list."""
         files, _ = QFileDialog.getOpenFileNames(
-            self, "Select Images or Videos", "",
+            self,
+            "Select Images or Videos",
+            "",
             "All Supported (*.jpg *.jpeg *.png *.bmp *.tiff *.webp *.mp4 *.avi *.mkv *.mov *.wmv *.flv);;"
             "Images (*.jpg *.jpeg *.png *.bmp *.tiff *.webp);;"
-            "Videos (*.mp4 *.avi *.mkv *.mov *.wmv *.flv);;All Files (*)"
+            "Videos (*.mp4 *.avi *.mkv *.mov *.wmv *.flv);;All Files (*)",
         )
         self.add_files_to_list(files)
 
@@ -296,7 +318,9 @@ class AnimeUpscalerGUI(QMainWindow):
         """Adds a list of files to the file list widget, avoiding duplicates."""
         added_count = 0
         for file_path in files:
-            existing_items = [self.file_list.item(i).text() for i in range(self.file_list.count())]
+            existing_items = [
+                self.file_list.item(i).text() for i in range(self.file_list.count())
+            ]
             if file_path not in existing_items:
                 self.file_list.addItem(QListWidgetItem(file_path))
                 added_count += 1
@@ -315,7 +339,7 @@ class AnimeUpscalerGUI(QMainWindow):
             self.output_folder = folder
             self.output_path_label.setText(folder)
             self.output_path_label.setStyleSheet("color: white;")
-            self.settings.setValue('output_folder', folder)
+            self.settings.setValue("output_folder", folder)
 
     def show_settings(self):
         """Shows the advanced settings dialog."""
@@ -326,34 +350,38 @@ class AnimeUpscalerGUI(QMainWindow):
             new_settings = dialog.get_settings()
             self.save_advanced_settings(new_settings)
             model_map_reverse = {
-                'realesr-animevideov3-x4': 'Anime Image/Video 4x',
-                'realesrgan-x4plus': 'General Image/Video 4x',
-                'realesrgan-x4plus-anime': 'Anime Photos 4x'
+                "realesr-animevideov3-x4": "Anime Image/Video 4x",
+                "realesrgan-x4plus": "General Image/Video 4x",
+                "realesrgan-x4plus-anime": "Anime Photos 4x",
             }
-            quick_model = model_map_reverse.get(new_settings['model'], 'Anime Image/Video 4x')
+            quick_model = model_map_reverse.get(
+                new_settings["model"], "Anime Image/Video 4x"
+            )
             self.model_combo.setCurrentText(quick_model)
             self.log("Settings updated")
 
     def get_current_settings(self) -> Dict[str, Any]:
         """Returns the current upscaling settings."""
         model_map = {
-            'Anime Image/Video 4x': 'realesr-animevideov3-x4',
-            'General Image/Video 4x': 'realesrgan-x4plus',
-            'Anime Photos 4x': 'realesrgan-x4plus-anime'
+            "Anime Image/Video 4x": "realesr-animevideov3-x4",
+            "General Image/Video 4x": "realesrgan-x4plus",
+            "Anime Photos 4x": "realesrgan-x4plus-anime",
         }
         return {
-            'model': model_map.get(self.model_combo.currentText(), 'realesr-animevideov3-x4'),
-            'use_gpu': self.settings.value('advanced_use_gpu', True, bool),
-            'tile_size': self.settings.value('advanced_tile_size', 400, int),
-            'fps': self.settings.value('advanced_fps', 24, int),
-            'quality': self.settings.value('advanced_quality', 18, int),
-            'format': self.settings.value('advanced_format', 'jpg', str)
+            "model": model_map.get(
+                self.model_combo.currentText(), "realesr-animevideov3-x4"
+            ),
+            "use_gpu": self.settings.value("advanced_use_gpu", True, bool),
+            "tile_size": self.settings.value("advanced_tile_size", 400, int),
+            "fps": self.settings.value("advanced_fps", 24, int),
+            "quality": self.settings.value("advanced_quality", 18, int),
+            "format": self.settings.value("advanced_format", "jpg", str),
         }
 
     def save_advanced_settings(self, settings: Dict[str, Any]):
         """Saves the advanced settings."""
         for key, value in settings.items():
-            self.settings.setValue(f'advanced_{key}', value)
+            self.settings.setValue(f"advanced_{key}", value)
         self.settings.sync()
 
     def start_upscaling(self):
@@ -398,13 +426,13 @@ class AnimeUpscalerGUI(QMainWindow):
         file_path = self.file_list.item(self.processed_files).text()
         file_name = Path(file_path).stem
         file_ext = Path(file_path).suffix
-        if file_ext.lower() in ['.mp4', '.avi', '.mkv', '.mov', '.wmv', '.flv']:
+        if file_ext.lower() in [".mp4", ".avi", ".mkv", ".mov", ".wmv", ".flv"]:
             output_ext = file_ext
         else:
             output_ext = f".{self.get_current_settings()['format']}"
 
-        model_name = self.get_current_settings()['model']
-        scale = 'x4'
+        model_name = self.get_current_settings()["model"]
+        scale = "x4"
 
         output_filename = f"{file_name}_upscaled_{scale}{output_ext}"
         output_path = os.path.join(self.output_folder, output_filename)
@@ -438,7 +466,9 @@ class AnimeUpscalerGUI(QMainWindow):
             elapsed = time.time() - self.start_time
             avg_time = elapsed / self.processed_files
             remaining = (self.total_files - self.processed_files) * avg_time
-            self.time_label.setText(f"Elapsed: {format_time(elapsed)} | Remaining: {format_time(remaining)}")
+            self.time_label.setText(
+                f"Elapsed: {format_time(elapsed)} | Remaining: {format_time(remaining)}"
+            )
 
         self.current_progress.setValue(0)
         self.process_next_file()
@@ -459,8 +489,9 @@ class AnimeUpscalerGUI(QMainWindow):
         self.time_label.setText(f"Total time: {format_time(elapsed)}")
         self.log(f"✅ Processing completed! Total time: {format_time(elapsed)}")
         QMessageBox.information(
-            self, "Processing Complete",
-            f"Successfully processed {self.total_files} files in {format_time(elapsed)}"
+            self,
+            "Processing Complete",
+            f"Successfully processed {self.total_files} files in {format_time(elapsed)}",
         )
 
     def stop_processing(self):
@@ -482,10 +513,12 @@ class AnimeUpscalerGUI(QMainWindow):
 
     def save_log(self):
         """Saves the current log to a text file."""
-        filename, _ = QFileDialog.getSaveFileName(self, "Save Log", "upscaler_log.txt", "Text Files (*.txt)")
+        filename, _ = QFileDialog.getSaveFileName(
+            self, "Save Log", "upscaler_log.txt", "Text Files (*.txt)"
+        )
         if filename:
             try:
-                with open(filename, 'w', encoding='utf-8') as f:
+                with open(filename, "w", encoding="utf-8") as f:
                     f.write(self.log_text.toPlainText())
                 self.log(f"Log saved to: {filename}")
             except Exception as e:
@@ -494,7 +527,8 @@ class AnimeUpscalerGUI(QMainWindow):
     def show_about(self):
         """Shows the 'About' dialog."""
         QMessageBox.about(
-            self, "About Anime-Media-Upscaler",
+            self,
+            "About Anime-Media-Upscaler",
             """
             <h3>Anime-Media-Upscaler v2.0.0</h3>
             <p>Professional anime image and video upscaling application</p>
@@ -509,25 +543,25 @@ class AnimeUpscalerGUI(QMainWindow):
             <p><b>Supported formats:</b></p>
             <p>Images: JPG, PNG, BMP, TIFF, WebP<br>
             Videos: MP4, AVI, MKV, MOV, WMV, FLV</p>
-            """
+            """,
         )
 
     def load_settings(self):
         """Loads application settings from QSettings."""
-        output_folder = self.settings.value('output_folder', '')
+        output_folder = self.settings.value("output_folder", "")
         if output_folder and os.path.exists(output_folder):
             self.output_folder = output_folder
             self.output_path_label.setText(output_folder)
             self.output_path_label.setStyleSheet("color: white;")
         else:
             self.output_folder = None
-        geometry = self.settings.value('geometry')
+        geometry = self.settings.value("geometry")
         if geometry:
             self.restoreGeometry(geometry)
 
     def closeEvent(self, event):
         """Saves settings and stops processing on application close."""
-        self.settings.setValue('geometry', self.saveGeometry())
+        self.settings.setValue("geometry", self.saveGeometry())
         if self.stop_btn.isEnabled():
             self.stop_processing()
         event.accept()

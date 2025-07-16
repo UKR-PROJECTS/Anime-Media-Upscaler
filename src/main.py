@@ -42,6 +42,7 @@ from PyQt6.QtWidgets import QApplication
 from PyQt6.QtGui import QIcon
 from app.main_window import AnimeUpscalerGUI
 
+
 def main():
     """
     Main application entry point.
@@ -52,7 +53,7 @@ def main():
     app.setApplicationVersion("2.0.0")
     app.setOrganizationName("UKR-PROJECTS")
 
-    icon_path = 'favicon.ico'
+    icon_path = "favicon.ico"
     if os.path.exists(icon_path):
         app.setWindowIcon(QIcon(icon_path))
 
@@ -64,6 +65,6 @@ def main():
 
     sys.exit(app.exec())
 
+
 if __name__ == "__main__":
     main()
-

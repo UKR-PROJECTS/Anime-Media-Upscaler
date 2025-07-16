@@ -8,11 +8,19 @@ The dialog allows users to adjust settings such as:
 - Video processing settings, such as output FPS and quality.
 - The output format for upscaled images.
 """
+
 from PyQt6.QtWidgets import (
-    QDialog, QVBoxLayout, QGroupBox, QFormLayout, QComboBox,
-    QCheckBox, QSpinBox, QDialogButtonBox
+    QDialog,
+    QVBoxLayout,
+    QGroupBox,
+    QFormLayout,
+    QComboBox,
+    QCheckBox,
+    QSpinBox,
+    QDialogButtonBox,
 )
 from typing import Dict, Any
+
 
 class SettingsDialog(QDialog):
     """A dialog for configuring advanced upscaling settings."""
@@ -30,10 +38,9 @@ class SettingsDialog(QDialog):
         model_group = QGroupBox("AI Model Settings")
         model_layout = QFormLayout(model_group)
         self.model_combo = QComboBox()
-        self.model_combo.addItems([
-            'realesr-animevideov3-x4', 'realesrgan-x4plus',
-            'realesrgan-x4plus-anime'
-        ])
+        self.model_combo.addItems(
+            ["realesr-animevideov3-x4", "realesrgan-x4plus", "realesrgan-x4plus-anime"]
+        )
         model_layout.addRow("Model:", self.model_combo)
 
         # Performance Settings
@@ -41,7 +48,9 @@ class SettingsDialog(QDialog):
         perf_layout = QFormLayout(perf_group)
         self.gpu_check = QCheckBox("Use GPU Acceleration")
         self.gpu_check.setChecked(True)
-        self.gpu_check.setToolTip("Enable GPU processing for faster upscaling (requires compatible graphics card)")
+        self.gpu_check.setToolTip(
+            "Enable GPU processing for faster upscaling (requires compatible graphics card)"
+        )
         perf_layout.addRow(self.gpu_check)
         self.tile_spin = QSpinBox()
         self.tile_spin.setRange(0, 2048)
@@ -79,7 +88,7 @@ class SettingsDialog(QDialog):
         output_group = QGroupBox("Output Format Settings")
         output_layout = QFormLayout(output_group)
         self.format_combo = QComboBox()
-        self.format_combo.addItems(['jpg', 'png', 'webp'])
+        self.format_combo.addItems(["jpg", "png", "webp"])
         self.format_combo.setToolTip(
             "Output format for images:\n"
             "• JPG: Smaller files, good for photos\n"
@@ -104,19 +113,21 @@ class SettingsDialog(QDialog):
     def get_settings(self) -> Dict[str, Any]:
         """Returns the current settings from the dialog's UI components."""
         return {
-            'model': self.model_combo.currentText(),
-            'use_gpu': self.gpu_check.isChecked(),
-            'tile_size': self.tile_spin.value() if self.tile_spin.value() > 0 else None,
-            'fps': self.fps_spin.value(),
-            'quality': self.quality_spin.value(),
-            'format': self.format_combo.currentText()
+            "model": self.model_combo.currentText(),
+            "use_gpu": self.gpu_check.isChecked(),
+            "tile_size": self.tile_spin.value() if self.tile_spin.value() > 0 else None,
+            "fps": self.fps_spin.value(),
+            "quality": self.quality_spin.value(),
+            "format": self.format_combo.currentText(),
         }
 
     def set_settings(self, settings: Dict[str, Any]):
         """Sets the dialog's UI components based on the provided settings."""
-        self.model_combo.setCurrentText(settings.get('model', 'realesr-animevideov3-x4'))
-        self.gpu_check.setChecked(settings.get('use_gpu', True))
-        self.tile_spin.setValue(settings.get('tile_size', 400) or 0)
-        self.fps_spin.setValue(settings.get('fps', 24))
-        self.quality_spin.setValue(settings.get('quality', 18))
-        self.format_combo.setCurrentText(settings.get('format', 'jpg'))
+        self.model_combo.setCurrentText(
+            settings.get("model", "realesr-animevideov3-x4")
+        )
+        self.gpu_check.setChecked(settings.get("use_gpu", True))
+        self.tile_spin.setValue(settings.get("tile_size", 400) or 0)
+        self.fps_spin.setValue(settings.get("fps", 24))
+        self.quality_spin.setValue(settings.get("quality", 18))
+        self.format_combo.setCurrentText(settings.get("format", "jpg"))
