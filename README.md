@@ -174,7 +174,7 @@ If you find this project useful, please consider giving it a star on GitHub! You
 
 <div align="center">
 
-**Made with ❤️ by the Ujjwal Nova**
+**Made with ❤️ by the ukr**
 
 [⭐ Star this repo](https://github.com/uikraft-hub/sharpify-gui) | [🐛 Report Bug](https://github.com/uikraft-hub/sharpify-gui/issues) | [💡 Request Feature](https://github.com/uikraft-hub/sharpify-gui/issues)
 
