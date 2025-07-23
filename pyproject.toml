@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "sharpify-gui"
 version = "2.0.0"
 authors = [
-  { name="UKR", email="ukrpurojekuto@gmail.com" },
+  { name="UKR", email="ujjwalkrai@gmail.com" },
 ]
 description = "A desktop GUI for the Real-ESRGAN image and video upscaler."
 readme = "README.md"
@@ -24,8 +24,8 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/ukr-projects/sharpify-gui"
-"Bug Tracker" = "https://github.com/ukr-projects/sharpify-gui/issues"
+"Homepage" = "https://github.com/uikraft-hub/sharpify-gui"
+"Bug Tracker" = "https://github.com/uikraft-hub/sharpify-gui/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
