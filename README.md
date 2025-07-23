@@ -102,7 +102,7 @@ pip install -r requirements.txt
 1. **Clone** the repository
 
    ```bash
-   git clone https://github.com/ukr-projects/sharpify-gui.git
+   git clone https://github.com/uikraft-hub/sharpify-gui.git
    cd sharpify-gui
    ```
 2. **Ensure** `bin/ffmpeg` and `bin/realesrgan-ncnn-vulkan` are present or in PATH
@@ -166,8 +166,8 @@ If you find this project useful, please consider giving it a star on GitHub! You
 
 ## 📞 Support
 
-- **GitHub Issues**: [Report bugs or request features](https://github.com/ukr-projects/sharpify-gui/issues)
-- **Discussions**: [Community discussions and Q&A](https://github.com/ukr-projects/sharpify-gui/discussions)
+- **GitHub Issues**: [Report bugs or request features](https://github.com/uikraft-hub/sharpify-gui/issues)
+- **Discussions**: [Community discussions and Q&A](https://github.com/uikraft-hub/sharpify-gui/discussions)
 - **Email**: ujjwalkrai@gmail.com
 
 ---
@@ -176,6 +176,6 @@ If you find this project useful, please consider giving it a star on GitHub! You
 
 **Made with ❤️ by the Ujjwal Nova**
 
-[⭐ Star this repo](https://github.com/ukr-projects/sharpify-gui) | [🐛 Report Bug](https://github.com/ukr-projects/sharpify-gui/issues) | [💡 Request Feature](https://github.com/ukr-projects/sharpify-gui/issues)
+[⭐ Star this repo](https://github.com/uikraft-hub/sharpify-gui) | [🐛 Report Bug](https://github.com/uikraft-hub/sharpify-gui/issues) | [💡 Request Feature](https://github.com/uikraft-hub/sharpify-gui/issues)
 
 </div>
