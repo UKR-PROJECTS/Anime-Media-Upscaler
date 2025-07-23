@@ -5,10 +5,10 @@ sharpify-gui - Professional Image and Video Upscaling Application
 A comprehensive PyQt6-based GUI application for upscaling anime images and videos
 using Real-ESRGAN AI models with advanced batch processing capabilities.
 
-Author: Ujjwal Nova
+Author: ukr
 Version: 2.0.0
 License: MIT
-Repository: https://github.com/ukr-projects/sharpify-gui
+Repository: https://github.com/uikraft-hub/sharpify-gui
 
 Key Features:
 - Batch processing of images and videos with 2x, 3x, and 4x upscaling
