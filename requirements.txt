@@ -1,11 +1,3 @@
-# Core GUI Framework
-PyQt6>=6.6.0,<7.0.0
-
-# Optional: For better error handling and logging
-# colorlog>=6.7.0
-
+PyQt6>=6.6.0
+colorlog>=6.7.0
 pytest>=8.0.0
-
-# Note: The following external dependencies are required but not Python packages:
-# 1. Real-ESRGAN executable (download from GitHub releases)
-# 2. FFmpeg executable (for video processing)
