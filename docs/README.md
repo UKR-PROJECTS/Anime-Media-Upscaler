@@ -1,6 +1,6 @@
 <h1>
   <img src="../assets/sharpify-gui-logo.ico" alt="Project Logo" width="25" height="25" style="vertical-align: middle;">
-  insta-downloader-gui
+  sharpify-gui
 </h1>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -9,7 +9,7 @@
 ![Language: Python](https://img.shields.io/badge/Language-Python-blue)
 
 <div align="center">
-  <img src="../assets/sharpify-gui-banner.jpg" alt="Project Banner" width="80%">
+  <img src="../assets/sharpify-gui-banner.jpg" alt="Project Banner" width="100%">
 </div>
 
 <div align="center">
@@ -22,6 +22,17 @@
 <div align="center">
   <img src="../assets/screenshots/screenshot.png" alt="GUI Interface" />
   <p><em>GUI Interface</em></p>
+</div>
+
+---
+
+## 🖼️ Example
+
+<div align="center">
+  <h3>Input</h3>
+  <img src="../assets/example/pikachu.jpg" alt="Input Image" />
+  <h3>Output</h3>
+  <img src="../assets/example/pikachu_upscaled_x4.jpg" alt="Output Image" />
 </div>
 
 ---
@@ -54,6 +65,55 @@
 ## 🗂️ Folder Structure
 
 ```
+sharpify-gui/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   └── feature_request.md
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── workflows/
+│       └── ci.yml
+├── .gitignore
+├── assets/
+│   ├── example/
+│   │   ├── pikachu_upscaled_x4.jpg
+│   │   └── pikachu.jpg
+│   ├── screenshots/
+│   │   └── screenshot.png
+│   └── sharpify-gui-logo.ico
+├── docs/
+│   ├── CHANGELOG.md
+│   ├── CODE_OF_CONDUCT.md
+│   ├── CONTRIBUTING.md
+│   ├── README.md
+│   ├── SECURITY.md
+│   ├── STATUS.md
+│   └── USAGE.md
+├── LICENSE
+├── pyproject.toml
+├── requirements.txt
+├── src/
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── main_window.py
+│   │   ├── settings_dialog.py
+│   │   ├── ui_utils.py
+│   │   └── workers.py
+│   ├── bin/
+│   │   ├── ffmpeg.exe
+│   │   └── realesrgan-ncnn-vulkan.exe
+│   ├── build.bat
+│   ├── favicon.ico
+│   ├── main.py
+│   └── models/
+│       ├── realesr-animevideov3-x4.bin
+│       ├── realesr-animevideov3-x4.param
+│       ├── realesrgan-x4plus-anime.bin
+│       ├── realesrgan-x4plus-anime.param
+│       ├── realesrgan-x4plus.bin
+│       └── realesrgan-x4plus.param
+└── tests/
+    └── test_workers.py
 
 ```
 
@@ -157,5 +217,3 @@ This project is licensed under the MIT License - see the [LICENSE](../LICENSE) f
 </div>
 
 ---
-
-

@@ -530,7 +530,7 @@ class AnimeUpscalerGUI(QMainWindow):
             self,
             "About Anime-Media-Upscaler",
             """
-            <h3>Anime-Media-Upscaler v2.0.0</h3>
+            <h3>Anime-Media-Upscaler v1.0.0</h3>
             <p>Professional anime image and video upscaling application</p>
             <p><b>Features:</b></p>
             <ul>

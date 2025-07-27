@@ -20,7 +20,7 @@ def main():
     """
     app = QApplication(sys.argv)
     app.setApplicationName("sharpify-gui")
-    app.setApplicationVersion("2.0.0")
+    app.setApplicationVersion("1.0.0")
     app.setOrganizationName("UKR-PROJECTS")
 
     icon_path = "favicon.ico"
@@ -30,7 +30,7 @@ def main():
     window = AnimeUpscalerGUI()
     window.show()
 
-    window.log("sharpify-gui v2.0.0 started")
+    window.log("sharpify-gui v1.0.0 started")
     window.log("Checking dependencies...")
 
     sys.exit(app.exec())
