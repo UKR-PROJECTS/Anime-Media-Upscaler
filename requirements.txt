@@ -1,3 +1,5 @@
 PyQt6>=6.6.0
-colorlog>=6.7.0
-pytest>=8.0.0
+black
+flake8 
+pytest
+requests-mock

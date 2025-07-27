@@ -4,12 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sharpify-gui"
-version = "2.0.0"
+version = "1.0.0"
 authors = [
   { name="ukr", email="ujjwalkrai@gmail.com" },
 ]
 description = "A desktop GUI for the Real-ESRGAN image and video upscaler."
-readme = "README.md"
+readme = "docs/README.md"
 requires-python = ">=3.8"
 license = { file = "LICENSE" }
 classifiers = [
@@ -21,6 +21,14 @@ classifiers = [
 ]
 dependencies = [
     "PyQt6>=6.6.0,<7.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8", 
+    "pytest",
+    "requests-mock",
 ]
 
 [project.urls]
